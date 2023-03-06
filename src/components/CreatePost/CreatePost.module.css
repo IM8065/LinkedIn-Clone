@@ -1,0 +1,68 @@
+.postContainer {
+  background-color: white;
+  padding: var(--space-size-4);
+  padding-bottom: 0;
+  border-radius: var(--border-radius-lg);
+}
+.postStart {
+  display: flex;
+  gap: var(--space-size-2);
+}
+
+.postStart img {
+  height: var(--space-size-7);
+  border-radius: 50%;
+}
+
+.postStart button {
+  background-color: transparent;
+  flex-grow: 1;
+  font-size: 14px;
+  color: var(--color-light-dark-2);
+  font-weight: 600;
+  border: 1px solid var(--color-light-dark-1);
+  border-radius: 35px;
+  text-align: initial;
+  padding-left: var(--space-size-3);
+}
+
+.buttonOptions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-size-1);
+}
+
+.buttonOption {
+  font-size: 14px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--border-radius-sm);
+  padding: 12px 8px;
+  margin: var(--space-size-1);
+}
+
+.buttonOption:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttonOption span {
+  margin-left: var(--space-size-4);
+  color: var(--color-light-dark-2);
+}
+
+.photo {
+  color: rgb(80, 141, 226);
+}
+.video {
+  color: rgb(110, 154, 77);
+}
+.event {
+  color: rgb(185, 128, 50);
+}
+.article {
+  color: rgb(211, 110, 78);
+}

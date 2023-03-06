@@ -1,0 +1,31 @@
+.navLink {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--space-size-3);
+  color: var(--color-light-dark-2);
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.activeLink {
+  color: var(--color-main);
+}
+
+.navLink:hover {
+  color: var(--color-main);
+}
+
+.listItem {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+}
+
+.active {
+  border-bottom: 2px solid black;
+  color: rgba(0, 0, 0);
+}

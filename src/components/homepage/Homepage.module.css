@@ -1,0 +1,339 @@
+.objectStyles {
+  background-color: var(--object-background-color);
+  border: 1px solid var(--gray-border-color);
+  border-radius: var(--border-radius-lg);
+}
+
+.wrapper {
+  padding: 0 var(--container-padding);
+  padding-top: 24px;
+}
+.header {
+  padding: 0 var(--container-padding);
+  border-bottom: 1px solid var(--gray-border-color);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav {
+  height: 100%;
+}
+
+.searchArea {
+  position: relative;
+}
+
+.searchArea svg {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+}
+
+.search {
+  font-size: 14px;
+  background-color: var(--search-background-color);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  height: 34px;
+  width: 280px;
+  padding-left: 40px;
+}
+
+.navList {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button img {
+  border-radius: 50%;
+  height: var(--space-size-5);
+}
+
+.profilePicture {
+  border-right: 1px solid var(--gray-border-color);
+}
+
+.stickyGridItem {
+  position: sticky;
+  top: 74px;
+  align-self: start;
+}
+
+.main {
+  min-height: 180vh;
+}
+
+.asideBackgroundImage {
+  height: 56.25px;
+  background-image: url("https://media.licdn.com/dms/image/C5616AQHdxdRi__C0Lw/profile-displaybackgroundimage-shrink_200_800/0/1648152929926?e=1683158400&v=beta&t=JO-ynvrQpStQHmkYCjtMKS_3Z6IsAgPZEKP-OzfY3cs");
+  border-top-left-radius: var(--border-radius-md);
+  border-top-right-radius: var(--border-radius-md);
+}
+
+.profileAside img {
+  margin-top: -38px;
+  background-color: white;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-bottom: var(--space-size-5);
+}
+
+.profileAside span {
+  font-size: var(--space-size-4);
+  font-weight: 600;
+  display: block;
+}
+
+.profileAside p {
+  font-size: var(--space-size-3);
+  color: var(--light-dark-2);
+}
+
+.network {
+  border-top: 1px solid var(--gray-border-color);
+  border-bottom: 1px solid var(--gray-border-color);
+  padding: var(--space-size-3);
+}
+
+.connections {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.connections span {
+  color: #0a66c2;
+  font-size: var(--space-size-3);
+}
+
+.network p {
+  font-size: var(--space-size-3);
+  font-weight: 600;
+  margin: 0;
+  text-align: start;
+}
+
+.premium {
+  text-align: start;
+  padding: var(--space-size-3);
+  color: var(--color-main);
+  text-decoration: none;
+  display: block;
+}
+
+.premium p {
+  margin: 0;
+  font-size: var(--space-size-3);
+}
+
+.free {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.myItems {
+  text-align: initial;
+  padding: var(--space-size-3);
+  border-top: 1px solid var(--gray-border-color);
+  border-bottom-right-radius: var(--border-radius-md);
+  border-bottom-left-radius: var(--border-radius-md);
+}
+
+.asideRight h2 {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: start;
+  padding: 12px;
+  margin: 0;
+}
+
+.asideRight ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.asideRight li {
+  margin-bottom: 8px;
+}
+
+.asideRight a {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.bulletContainer {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 16px;
+  margin-top: 4px;
+  color: black;
+}
+
+.bullet {
+  border-radius: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  border: 3px solid rgba(0, 0, 0, 0.6);
+  margin: 0 12px 2px 14px;
+  padding: 0px;
+  outline: 0;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+}
+
+.sideInfo {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  padding-left: 32px;
+  margin: 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: start;
+}
+
+.advertisement {
+  margin-top: 8px;
+}
+
+.advertisementProfile {
+  width: 70px;
+  vertical-align: top;
+  display: table-cell;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  margin-right: 16px;
+  outline: 0;
+}
+
+.advertisementHeading {
+  margin: 12px;
+  text-align: end;
+}
+
+.advertisementLink {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+}
+
+.advertisementCompany {
+  border: 3px solid transparent;
+  display: block;
+  padding: 0;
+  margin: 0;
+  max-width: 70px;
+  max-height: 70px;
+  margin: 0 auto;
+  outline: 0;
+}
+
+.imagesSectionAdvertisement {
+  width: min-content;
+  margin: 0 auto;
+  display: flex;
+}
+
+.discoverSection {
+  margin-top: 8px;
+}
+
+.discoverTag {
+  text-align: start;
+  padding: 4px 0;
+}
+
+.discoverTag a {
+  text-decoration: none;
+  color: #0a66c2;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.discoverTag a:hover {
+  text-decoration: revert;
+}
+
+.discoverTag button {
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.plus {
+  display: flex;
+  align-items: center;
+}
+
+.discoverMore {
+  border-top: 1px solid var(--gray-border-color);
+}
+
+.discoverMore a {
+  display: block;
+  border-bottom-left-radius: var(--border-radius-lg);
+  border-bottom-right-radius: var(--border-radius-lg);
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 12px 0;
+}
+
+.discoverMore a:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  padding: var(--space-size-3);
+}
+
+.footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 24px;
+}
+
+.footer ul li {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  margin: 4px 8px;
+}
