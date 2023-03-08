@@ -167,11 +167,11 @@ function Homepage() {
           </ul>
         </nav>
       </header>
-      <div className={styles.wrapper}>
+      <div className={styles.bodyWrapper}>
         <Grid>
           <aside>
             <div className={`${styles.profileAside} ${styles.objectStyles}`}>
-              <div className={styles.asideBackgroundImage}></div>
+              <div className={styles.profileAsideBackgroundImage}></div>
               <img src="/holder_pic.png" alt="Profile Picture" />
               <span>Isai Martinez</span>
               <p>Java Full Stack Engineer</p>
@@ -322,6 +322,11 @@ function Homepage() {
                       alt="advertisement company picture"
                     />
                   </a>
+                </section>
+                <section className={styles.advertisementConclusion}>
+                  <p>Isai, explore relevant opportunities with</p>
+                  <span>NTT DATA Services</span>
+                  <button>Follow</button>
                 </section>
               </div>
 
