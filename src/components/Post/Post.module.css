@@ -1,0 +1,54 @@
+.postContainer {
+  text-align: initial;
+  background-color: var(--object-background-color);
+  background-color: var(--object-background-color);
+  border: 1px solid var(--gray-border-color);
+  border-radius: var(--border-radius-lg);
+  margin-top: var(--space-size-6);
+  padding: var(--space-size-3);
+}
+
+.postHeader {
+  display: flex;
+}
+
+.postCreaterName {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  padding: 0;
+  margin: 0;
+}
+
+.followers {
+  font-size: var(--space-size-3);
+  color: var(--color-light-dark-2);
+  padding: 0;
+  margin: 0;
+}
+
+.timeElapsed {
+  font-size: var(--space-size-3);
+  color: var(--color-light-dark-2);
+  font-weight: var(--font-weight-bold);
+  display: block;
+}
+
+.iconGroup {
+  padding: var(--space-size-3) 42px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.postParagraph span,
+.postParagraph a {
+  color: rgb(46, 100, 188);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.postParagraph {
+  margin-top: var(--space-size-3);
+  margin-bottom: var(--space-size-4);
+}

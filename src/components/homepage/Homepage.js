@@ -5,6 +5,7 @@ import CreatePost from "../CreatePost/CreatePost";
 import Grid from "../Grid/Grid";
 import NavItem from "../NavItem/NavItem";
 import styles from "./Homepage.module.css";
+import Post from "../Post/Post";
 
 function Homepage() {
   return (
@@ -223,6 +224,7 @@ function Homepage() {
           </aside>
           <main className={styles.main}>
             <CreatePost />
+            <Post />
           </main>
           <aside className={` ${styles.asideRight}`}>
             <div className={styles.objectStyles}>
