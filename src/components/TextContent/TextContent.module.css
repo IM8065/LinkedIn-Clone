@@ -1,0 +1,12 @@
+.postParagraph span,
+.postParagraph a {
+  color: rgb(46, 100, 188);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.postParagraph {
+  margin-top: var(--space-size-3);
+  margin-bottom: var(--space-size-4);
+}

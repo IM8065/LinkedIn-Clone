@@ -4,34 +4,48 @@ import LikeIcon from "../../svgs/like.svg";
 import CommentIcon from "../../svgs/comment.svg";
 import SendIcon from "../../svgs/send.svg";
 import RepostIcon from "../../svgs/repost.svg";
+import TextContent from "../TextContent/TextContent";
+import ImageContent from "../ImageContent/ImageContent";
+import VideoContent from "../VideoContent/VideoContent";
 
-function Post() {
+function Post({post}) {
   return (
     <div className={styles.postContainer}>
       <div className={styles.postHeader}>
         <div>
           <img
-            src="./hexaware.jpeg"
+            src={post.profilePhoto}
             alt="hexaware logo"
             style={{width: "48px", height: "48px"}}
           />
         </div>
         <div>
-          <h5 className={styles.postCreaterName}>Hexaware Technologies</h5>
-          <p className={styles.followers}>770,716 followers</p>
-          <span className={styles.timeElapsed}>1w</span>
+          <h5 className={styles.postCreaterName}>{post.profileName}</h5>
+          <p className={styles.followers}>{post.profileFollowers}</p>
+          <span className={styles.timeElapsed}>{post.postedDate}</span>
         </div>
       </div>
       <div className={styles.contentArea}>
-        <p className={styles.postParagraph}>
-          <span>#HexAlert</span> Hexaware will be at the <span>#AWS</span> re:
-          Invent 2023! We look forward to seeing you at the most transformative{" "}
-          <span>#event</span> in <span>#tech</span>, where you can elevate your{" "}
-          <span>#cloud</span>
-          <span>#experience</span> as you learn from AWS <span>#leaders</span>{" "}
-          and discover game-changing technologies.{" "}
-          <a href="#">http://bit.ly/3kduVfC</a>
-        </p>
+        {post.textContent ? <TextContent content={post.textContent} /> : ""}
+
+        {post.imageContent ? <ImageContent content={post.imageContent} /> : ""}
+
+        {post.videoContent ? (
+          <VideoContent content={post.videoContent} caption="Earth" />
+        ) : (
+          ""
+        )}
+
+        {post.adContent ? (
+          <div className={styles.adContainer}>
+            <span>{post.adContent.caption}</span>
+            <h3>
+              {post.adContent.website} • {post.adContent.readLength} min read
+            </h3>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <div className={styles.iconGroup}>
         <img src={LikeIcon} alt="like icon" />
