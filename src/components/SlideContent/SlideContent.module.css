@@ -1,0 +1,50 @@
+.slideCarousel {
+  overflow: hidden;
+  position: relative;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.imageList {
+  display: flex;
+  gap: 16px;
+  transform: translate(0px, 0px);
+  transition: transform 330ms ease-in-out;
+}
+
+.imageContainer {
+  min-width: 80.6%;
+}
+
+.slideArrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slideLeft {
+  left: 0;
+}
+
+.slideRight {
+  right: 0;
+}
+
+.slideImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.8rem;
+}

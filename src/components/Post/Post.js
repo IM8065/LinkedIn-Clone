@@ -7,6 +7,7 @@ import RepostIcon from "../../svgs/repost.svg";
 import TextContent from "../TextContent/TextContent";
 import ImageContent from "../ImageContent/ImageContent";
 import VideoContent from "../VideoContent/VideoContent";
+import SlideContent from "../SlideContent/SlideContent";
 
 function Post({post}) {
   return (
@@ -46,6 +47,16 @@ function Post({post}) {
         ) : (
           ""
         )}
+
+        {post.slideContent ? (
+          <SlideContent content={post.slideContent?.images} />
+        ) : (
+          ""
+        )}
+      </div>
+      <div className={styles.postActivity}>
+        <span>{post.likes} likes</span>
+        <span>{post.reposts} reposts</span>
       </div>
       <div className={styles.iconGroup}>
         <img src={LikeIcon} alt="like icon" />

@@ -1,0 +1,86 @@
+.wrapper {
+  left: auto;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  padding: 0;
+  right: 0;
+  width: 288px;
+  border-radius: 0.8rem 0 0.8rem 0.8rem;
+  background-color: #fff;
+  transition: visibility 0s linear 167ms,
+    opacity 167ms cubic-bezier(0.4, 0, 1, 1) 0s, z-index 0s linear 167ms;
+  top: calc(100% + 8px);
+  bottom: auto;
+  background-clip: padding-box;
+  display: inline-block;
+  position: absolute;
+  min-width: 168px;
+  max-width: 26.4rem;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.8), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.wrapper h2 {
+  font-size: 16px;
+  text-align: left;
+  margin: 0;
+}
+.wrapper p {
+  margin-top: 8px;
+}
+
+.wrapper a {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+
+.modalHeading {
+  padding: 12px;
+}
+
+.modalHeading img {
+  height: 72px;
+}
+
+.modalFlex {
+  display: flex;
+}
+
+.modalHeading button {
+  margin: var(--space-size-1) 0;
+  padding: 0 var(--space-size-4);
+  border: 1px solid var(--main-color-blue);
+  line-height: calc(24px - 1px * 2);
+  border-radius: 16px;
+  background-color: transparent;
+  color: var(--main-color-blue);
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  width: 100%;
+}
+
+.modalHeading button:hover {
+  background-color: rgba(112, 181, 249, 0.15);
+  box-shadow: inset 0 0 0 1px var(--main-color-blue);
+}
+
+.border {
+  padding: 8px;
+  background-color: var(--object-background-color);
+  border-top: 1px solid var(--gray-border-color);
+}

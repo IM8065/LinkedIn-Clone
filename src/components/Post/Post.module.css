@@ -60,3 +60,14 @@
   margin-top: var(--space-size-3);
   padding: 0;
 }
+
+.postActivity {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: var(--space-size-2) 0;
+}
+
+.postActivity span {
+  display: block;
+}
