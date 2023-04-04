@@ -1,0 +1,17 @@
+.menuContainer {
+  position: absolute;
+  height: calc(100vh - 50px);
+  background-color: white;
+  width: 380px;
+  top: 50;
+  right: 0;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  transition: transform 330ms ease-in-out;
+  transform: translatex(400px);
+  z-index: 999;
+}
+
+.open {
+  transform: translateX(0);
+}

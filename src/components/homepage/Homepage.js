@@ -6,6 +6,7 @@ import Grid from "../Grid/Grid";
 import NavItem from "../NavItem/NavItem";
 import styles from "./Homepage.module.css";
 import Post from "../Post/Post";
+import SideMenu from "../SideMenu/SideMenu";
 import Logo from "../../svgs/logo.svg";
 import SearchIcon from "../../svgs/search.svg";
 import HomeIcon from "../../svgs/home.svg";
@@ -19,6 +20,7 @@ import LogoTwo from "../../svgs/logotwo.svg";
 
 import useToggle from "../../use-toggle";
 import Modal from "../Modal/Modal";
+import useMenuToggle from "../../use-menu-toggle";
 
 let post = {
   id: Math.random(),
@@ -52,9 +54,10 @@ let post = {
 
 function Homepage() {
   const [isModalOpen, toggleIsModalOpen] = useToggle(false);
+  const [isSideMenuOpen, toggleIsSideMenuOpen] = useMenuToggle(false);
 
   return (
-    <>
+    <div className={`${isSideMenuOpen ? styles.stopScroll : ""}`}>
       <header className={styles.header}>
         <div className={styles.logo}>
           <img src={Logo} alt="logo" />
@@ -114,7 +117,7 @@ function Homepage() {
               </button>
             </li>
             <li>
-              <button className={styles.button}>
+              <button className={styles.button} onClick={toggleIsSideMenuOpen}>
                 <img src={GridIcon} alt="grid icon" />
               </button>
             </li>
@@ -122,6 +125,10 @@ function Homepage() {
           </ul>
         </nav>
       </header>
+      <SideMenu handleDismiss={toggleIsSideMenuOpen} isOpen={isSideMenuOpen} />
+      <div
+        className={`${styles.overlay} ${isSideMenuOpen ? styles.open : ""}`}
+      ></div>
       <div className={styles.bodyWrapper}>
         <Grid>
           <aside>
@@ -293,7 +300,7 @@ function Homepage() {
           </aside>
         </Grid>
       </div>
-    </>
+    </div>
   );
 }
 
