@@ -8,36 +8,97 @@ import SellIcon from "../../svgs/sell.svg";
 import GroupsIcon from "../../svgs/groups.svg";
 import ServicesIcon from "../../svgs/services.svg";
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faX} from "@fortawesome/free-solid-svg-icons";
+
 function SideMenu({handleDismiss, isOpen}) {
   return (
     <div className={`${styles.menuContainer} ${isOpen ? styles.open : ""}`}>
-      <h2>Work</h2>
+      <div className={styles.containerHeader}>
+        <h2>Work</h2>
+        <FontAwesomeIcon icon={faX} />
+      </div>
 
-      <div className={styles.section}>
+      <div>
         <div className={styles.sectionHeader}>
           <h3>Visit More LinkedIn Products</h3>
         </div>
 
-        <ul>
-          <li>
-            <img src={InsightsIcon} />
-          </li>
-          <li>
-            <img src={JobPostIcon} />
-          </li>
-          <li>
-            <img src={AdvertiseIcon} />
-          </li>
-          <li>
-            <img src={SellIcon} />
-          </li>
-          <li>
-            <img src={GroupsIcon} />
-          </li>
-          <li>
-            <img src={ServicesIcon} />
-          </li>
-        </ul>
+        <div className={styles.sectionBody}>
+          <ul className={styles.iconList}>
+            <li>
+              <a href="#" className={styles.iconLink}>
+                <img src={InsightsIcon} /> Insights
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.iconLink}>
+                <img src={JobPostIcon} /> Post a job
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.iconLink}>
+                <img src={AdvertiseIcon} /> Advertise
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.iconLink}>
+                <img src={SellIcon} /> Sell
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.iconLink}>
+                <img src={GroupsIcon} /> Groups
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.iconLink}>
+                <img src={ServicesIcon} /> Services Marketplace
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div className={styles.sectionHeader}>
+          <h3>LinkedIn Business Services</h3>
+        </div>
+
+        <div className={styles.sectionBody}>
+          <ul>
+            <li>
+              <a href="#">
+                <h4>Talent Solutions</h4>
+                <p>Find, attract and recruit talent</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Sales Solutions</h4>
+                <p>Unlock sales opportunities</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Post a job for free</h4>
+                <p>Get your job in front of quality candidates</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Marketing Solutions</h4>
+                <p>Aquire customers and grow your business</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Learning Solutions</h4>
+                <p>Develop talent across your organization</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

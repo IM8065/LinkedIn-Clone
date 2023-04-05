@@ -1,4 +1,5 @@
 .menuContainer {
+  box-sizing: border-box;
   position: absolute;
   height: calc(100vh - 50px);
   background-color: white;
@@ -10,8 +11,114 @@
   transition: transform 330ms ease-in-out;
   transform: translatex(400px);
   z-index: 999;
+  padding: 24px;
+}
+
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.containerHeader h2 {
+  font-size: 20px;
+  margin-top: 0;
 }
 
 .open {
   transform: translateX(0);
+}
+
+.sectionBody {
+  background-color: var(--object-background-color);
+  border: 1px solid var(--gray-border-color);
+  border-bottom-left-radius: var(--border-radius-lg);
+  border-bottom-right-radius: var(--border-radius-lg);
+  padding: 18px 24px;
+}
+
+.sectionHeader {
+  padding: 16px 24px;
+  border-top-left-radius: var(--border-radius-lg);
+  border-top-right-radius: var(--border-radius-lg);
+  border: 1px solid var(--gray-border-color);
+  border-bottom: none;
+  margin-top: 12px;
+}
+
+.sectionHeader h3 {
+  font-size: 16px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.iconList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.iconLink {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+}
+
+.iconLink img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding: 0;
+  margin: 0 0 4px 0;
+  border: 1px solid var(--gray-border-color);
+  border-radius: var(--border-radius-sm);
+}
+
+.sectionBody a {
+  text-decoration: none;
+}
+
+.sectionBody a:hover {
+  text-decoration: underline;
+}
+
+.sectionBody h4 {
+  color: black;
+  font-size: 14px;
+}
+
+.sectionBody p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.33333;
+}
+
+.sectionBody ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.sectionBody h4,
+.sectionBody p {
+  padding: 0;
+  margin: 0;
+}
+
+.sectionBody h4 {
+  margin-bottom: 4px;
+}
+
+.sectionBody p {
+  margin-bottom: 8px;
 }
