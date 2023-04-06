@@ -57,7 +57,7 @@ function Homepage() {
   const [isSideMenuOpen, toggleIsSideMenuOpen] = useMenuToggle(false);
 
   return (
-    <div className={`${isSideMenuOpen ? styles.stopScroll : ""}`}>
+    <div>
       <header className={styles.header}>
         <div className={styles.logo}>
           <img src={Logo} alt="logo" />
@@ -124,10 +124,15 @@ function Homepage() {
             {/* <NavItem active={false} href="/" icon={} label="Learning" /> */}
           </ul>
         </nav>
+        <SideMenu
+          handleDismiss={toggleIsSideMenuOpen}
+          isOpen={isSideMenuOpen}
+        />
       </header>
-      <SideMenu handleDismiss={toggleIsSideMenuOpen} isOpen={isSideMenuOpen} />
+
       <div
         className={`${styles.overlay} ${isSideMenuOpen ? styles.open : ""}`}
+        onClick={toggleIsSideMenuOpen}
       ></div>
       <div className={styles.bodyWrapper}>
         <Grid>

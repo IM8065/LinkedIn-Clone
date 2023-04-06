@@ -3,6 +3,7 @@
   position: relative;
   margin-left: -12px;
   margin-right: -12px;
+  z-index: 0;
 }
 
 .imageList {
@@ -18,7 +19,7 @@
 
 .slideArrow {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 50%;
   transform: translateY(-50%);
   background: none;

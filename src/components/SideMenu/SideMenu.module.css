@@ -4,7 +4,7 @@
   height: calc(100vh - 50px);
   background-color: white;
   width: 380px;
-  top: 50;
+  top: 51px;
   right: 0;
   border-top-left-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
@@ -23,6 +23,15 @@
 .containerHeader h2 {
   font-size: 20px;
   margin-top: 0;
+  padding-top: 12px;
+}
+
+.closeButton {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  padding: 12px;
+  align-self: start;
 }
 
 .open {
@@ -35,6 +44,12 @@
   border-bottom-left-radius: var(--border-radius-lg);
   border-bottom-right-radius: var(--border-radius-lg);
   padding: 18px 24px;
+}
+
+.sectionBodyBottom {
+  padding-top: 8px;
+  padding-bottom: 0;
+  border-radius: 0;
 }
 
 .sectionHeader {
@@ -55,11 +70,15 @@
 
 .iconList {
   padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
-  gap: 32px;
   flex-wrap: wrap;
+  gap: 0 16px;
+}
+
+.iconList li {
+  padding: 8px 8px 16px 0;
+  position: relative;
 }
 
 .iconLink {
@@ -71,6 +90,11 @@
   text-decoration: none;
   align-items: center;
   text-align: center;
+}
+
+.iconLink span {
+  position: absolute;
+  bottom: 0;
 }
 
 .iconLink img {
@@ -121,4 +145,25 @@
 
 .sectionBody p {
   margin-bottom: 8px;
+}
+
+.sectionFooter {
+  padding: 8px 24px 12px 24px;
+  text-align: left;
+  border-bottom-left-radius: var(--border-radius-lg);
+  border-bottom-right-radius: var(--border-radius-lg);
+  border: 1px solid var(--gray-border-color);
+  border-top: none;
+}
+
+.sectionFooter a {
+  color: black;
+  padding: 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sectionFooter a:hover {
+  text-decoration: underline;
 }

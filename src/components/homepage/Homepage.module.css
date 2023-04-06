@@ -13,7 +13,7 @@
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 2;
+  z-index: 10;
 }
 
 .overlay {
@@ -403,6 +403,6 @@
 }
 
 .stopScroll {
-  height: 100vh;
   overflow: hidden;
+  position: absolute;
 }

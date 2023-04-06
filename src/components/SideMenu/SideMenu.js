@@ -9,14 +9,18 @@ import GroupsIcon from "../../svgs/groups.svg";
 import ServicesIcon from "../../svgs/services.svg";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faX} from "@fortawesome/free-solid-svg-icons";
+import {faX, faPlus} from "@fortawesome/free-solid-svg-icons";
 
 function SideMenu({handleDismiss, isOpen}) {
   return (
     <div className={`${styles.menuContainer} ${isOpen ? styles.open : ""}`}>
       <div className={styles.containerHeader}>
         <h2>Work</h2>
-        <FontAwesomeIcon icon={faX} />
+        <FontAwesomeIcon
+          icon={faX}
+          className={styles.closeButton}
+          onClick={handleDismiss}
+        />
       </div>
 
       <div>
@@ -28,32 +32,32 @@ function SideMenu({handleDismiss, isOpen}) {
           <ul className={styles.iconList}>
             <li>
               <a href="#" className={styles.iconLink}>
-                <img src={InsightsIcon} /> Insights
+                <img src={InsightsIcon} /> <span>Insights</span>
               </a>
             </li>
             <li>
               <a href="#" className={styles.iconLink}>
-                <img src={JobPostIcon} /> Post a job
+                <img src={JobPostIcon} /> <span>Post a job</span>
               </a>
             </li>
             <li>
               <a href="#" className={styles.iconLink}>
-                <img src={AdvertiseIcon} /> Advertise
+                <img src={AdvertiseIcon} /> <span>Advertise</span>
               </a>
             </li>
             <li>
               <a href="#" className={styles.iconLink}>
-                <img src={SellIcon} /> Sell
+                <img src={SellIcon} /> <span>Sell</span>
               </a>
             </li>
             <li>
               <a href="#" className={styles.iconLink}>
-                <img src={GroupsIcon} /> Groups
+                <img src={GroupsIcon} /> <span>Groups</span>
               </a>
             </li>
             <li>
               <a href="#" className={styles.iconLink}>
-                <img src={ServicesIcon} /> Services Marketplace
+                <img src={ServicesIcon} /> <span>Services Marketplace</span>
               </a>
             </li>
           </ul>
@@ -65,7 +69,7 @@ function SideMenu({handleDismiss, isOpen}) {
           <h3>LinkedIn Business Services</h3>
         </div>
 
-        <div className={styles.sectionBody}>
+        <div className={`${styles.sectionBody} ${styles.sectionBodyBottom}`}>
           <ul>
             <li>
               <a href="#">
@@ -98,6 +102,11 @@ function SideMenu({handleDismiss, isOpen}) {
               </a>
             </li>
           </ul>
+        </div>
+        <div className={styles.sectionFooter}>
+          <a href="#">
+            Create a Company Page <FontAwesomeIcon icon={faPlus} />
+          </a>
         </div>
       </div>
     </div>
