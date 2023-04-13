@@ -1,17 +1,53 @@
 .menuContainer {
-  box-sizing: border-box;
-  position: absolute;
-  height: calc(100vh - 50px);
-  background-color: white;
   width: 380px;
-  top: 51px;
-  right: 0;
+  height: calc(100vh - 50px);
+  box-sizing: border-box;
   border-top-left-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
-  transition: transform 330ms ease-in-out;
-  transform: translatex(400px);
+  position: absolute;
+  top: 51px;
+  right: 0;
+  overflow: hidden;
+  background-color: white;
   z-index: 999;
   padding: 24px;
+  transform: translateX(100%);
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  /* transition: 330ms; */
+  /* transition: transform 330ms ease-in-out;
+  transform: translatex(400px); */
+  /* animation: mymove 330ms ease-in-out; */
+}
+
+/* @keyframes mymove {
+  0% {
+    transform: translatex(400px);
+  }
+  100% {
+    transform: translatex(0);
+  }
+} */
+
+.open {
+  /* display: initial; */
+  /* width: 380px;
+  padding: 24px; */
+  transform: none;
+  /* transform: translateX(0); */
+}
+
+/* .closed {
+  animation: closing 330ms ease-in-out;
+} */
+
+@keyframes closing {
+  0% {
+    transform: translatex(0);
+  }
+  100% {
+    transform: translatex(400px);
+  }
 }
 
 .containerHeader {
@@ -32,10 +68,6 @@
   width: 16px;
   padding: 12px;
   align-self: start;
-}
-
-.open {
-  transform: translateX(0);
 }
 
 .sectionBody {
@@ -166,4 +198,8 @@
 
 .sectionFooter a:hover {
   text-decoration: underline;
+}
+
+.hider {
+  display: none;
 }

@@ -4,100 +4,6 @@
   border-radius: var(--border-radius-lg);
 }
 
-.header {
-  padding: 0 var(--container-padding);
-  border-bottom: 1px solid var(--gray-border-color);
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 10;
-}
-
-.overlay {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  animation: mymove 330ms linear;
-}
-
-@keyframes mymove {
-  0% {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-}
-
-.open {
-  display: initial;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-size-2);
-}
-
-.nav {
-  height: 100%;
-}
-
-.searchArea {
-  position: relative;
-}
-
-.searchArea img {
-  position: absolute;
-  top: 8px;
-  left: 14px;
-}
-
-.search {
-  font-size: 14px;
-  background-color: var(--search-background-color);
-  border: none;
-  border-radius: var(--border-radius-sm);
-  height: 34px;
-  width: 280px;
-  padding-left: 40px;
-}
-
-.navList {
-  list-style: none;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-
-.button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.profileModal {
-  position: relative;
-}
-
-.button img {
-  border-radius: 50%;
-  height: var(--space-size-5);
-}
-
-.profilePicture {
-  border-right: 1px solid var(--gray-border-color);
-}
-
 .bodyWrapper {
   padding: 0 var(--container-padding);
   padding-top: var(--space-size-5);
@@ -118,6 +24,10 @@
   background-image: url("https://media.licdn.com/dms/image/C5616AQHdxdRi__C0Lw/profile-displaybackgroundimage-shrink_200_800/0/1648152929926?e=1683158400&v=beta&t=JO-ynvrQpStQHmkYCjtMKS_3Z6IsAgPZEKP-OzfY3cs");
   border-top-left-radius: var(--border-radius-md);
   border-top-right-radius: var(--border-radius-md);
+}
+
+.profileAside {
+  text-align: center;
 }
 
 .profileAside img {
@@ -251,6 +161,7 @@
 }
 
 .advertisement {
+  text-align: center;
   margin-top: var(--space-size-2);
 }
 
@@ -365,6 +276,7 @@
 
 .discoverMore {
   border-top: 1px solid var(--gray-border-color);
+  text-align: center;
 }
 
 .discoverMore a {

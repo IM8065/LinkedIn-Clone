@@ -1,0 +1,49 @@
+.gridArea {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 26% 71%;
+  justify-content: space-between;
+  padding: 24px var(--container-padding);
+}
+
+.manageNetwork {
+  background-color: white;
+}
+
+.manageNetwork h3 {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 20px;
+}
+
+.networkOptions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links {
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 0 20px;
+}
+
+.links:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.links p {
+  display: inline;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.links span {
+  margin-left: auto;
+}
+
+.youMayKnow {
+  background-color: white;
+}
