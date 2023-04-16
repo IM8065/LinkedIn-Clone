@@ -11,9 +11,13 @@ import ServicesIcon from "../../svgs/services.svg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faX, faPlus} from "@fortawesome/free-solid-svg-icons";
 
-function SideMenu({handleDismiss, isOpen}) {
+function SideMenu({handleDismiss, isOpen, isClosing}) {
   return (
-    <div className={`${styles.menuContainer} ${isOpen ? styles.open : ""}`}>
+    <div
+      className={`${styles.menuContainer} ${isOpen ? styles.open : ""} ${
+        isClosing ? styles.closing : ""
+      }`}
+    >
       <div className={`${!isOpen ? styles.hider : ""}`}>
         <div className={styles.containerHeader}>
           <h2>Work</h2>

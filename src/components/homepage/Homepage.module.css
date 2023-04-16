@@ -4,14 +4,54 @@
   border-radius: var(--border-radius-lg);
 }
 
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: var(--none-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  gap: var(--spacer-5);
+}
+
+.asideRight {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mainGrid {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: var(--aside-left-width) var(--main-width);
+    min-width: var(--md-min-width);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .asideRight {
+    display: initial;
+  }
+
+  .mainGrid {
+    min-width: var(--lg-min-width);
+    grid-template-areas: "sidebar main aside";
+    grid-template-columns:
+      var(--aside-left-width) var(--main-width)
+      var(--aside-right-width);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mainGrid {
+    min-width: var(--xl-min-width);
+  }
+}
+
 .bodyWrapper {
-  padding: 0 var(--container-padding);
-  padding-top: var(--space-size-5);
+  padding-top: var(--spacer-5);
 }
 
 .stickyGridItem {
   position: sticky;
-  top: 74px;
+  top: 72px;
   align-self: start;
 }
 
@@ -36,24 +76,24 @@
   height: 72px;
   border-radius: 50%;
   border: 2px solid white;
-  margin-bottom: var(--space-size-5);
+  margin-bottom: var(--spacer-5);
 }
 
 .profileAside span {
-  font-size: var(--space-size-4);
+  font-size: var(--spacer-4);
   font-weight: var(--font-weight-bold);
   display: block;
 }
 
 .profileAside p {
-  font-size: var(--space-size-3);
+  font-size: var(--spacer-3);
   color: var(--light-dark-2);
 }
 
 .network {
   border-top: 1px solid var(--gray-border-color);
   border-bottom: 1px solid var(--gray-border-color);
-  padding: var(--space-size-3);
+  padding: var(--spacer-3);
 }
 
 .connections {
@@ -64,11 +104,11 @@
 
 .connections span {
   color: var(--main-color-blue);
-  font-size: var(--space-size-3);
+  font-size: var(--spacer-3);
 }
 
 .network p {
-  font-size: var(--space-size-3);
+  font-size: var(--spacer-3);
   font-weight: var(--font-weight-bold);
   margin: 0;
   text-align: start;
@@ -76,7 +116,7 @@
 
 .premium {
   text-align: start;
-  padding: var(--space-size-3);
+  padding: var(--spacer-3);
   color: var(--color-main);
   text-decoration: none;
   display: block;
@@ -84,7 +124,7 @@
 
 .premium p {
   margin: 0;
-  font-size: var(--space-size-3);
+  font-size: var(--spacer-3);
 }
 
 .free {
@@ -94,17 +134,17 @@
 
 .myItems {
   text-align: initial;
-  padding: var(--space-size-3);
+  padding: var(--spacer-3);
   border-top: 1px solid var(--gray-border-color);
   border-bottom-right-radius: var(--border-radius-md);
   border-bottom-left-radius: var(--border-radius-md);
 }
 
 .asideRight h2 {
-  font-size: var(--space-size-4);
+  font-size: var(--spacer-4);
   line-height: 1.5;
   text-align: start;
-  padding: var(--space-size-3);
+  padding: var(--spacer-3);
   margin: 0;
 }
 
@@ -115,7 +155,7 @@
 }
 
 .asideRight li {
-  margin-bottom: var(--space-size-2);
+  margin-bottom: var(--spacer-2);
 }
 
 .asideRight a {
@@ -129,8 +169,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: var(--space-size-4);
-  margin-top: var(--space-size-1);
+  padding-right: var(--spacer-4);
+  margin-top: var(--spacer-1);
   color: black;
 }
 
@@ -153,7 +193,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
-  padding-left: 32px;
+  padding-left: var(--spacer-6);
   margin: 0;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
@@ -162,11 +202,11 @@
 
 .advertisement {
   text-align: center;
-  margin-top: var(--space-size-2);
+  margin-top: var(--spacer-2);
 }
 
 .advertisement p {
-  font-size: var(--space-size-3);
+  font-size: var(--spacer-3);
 }
 
 .advertisementProfile {
@@ -176,12 +216,12 @@
   border-radius: 50%;
   padding: 0;
   margin: 0;
-  margin-right: var(--space-size-4);
+  margin-right: var(--spacer-4);
   outline: 0;
 }
 
 .advertisementHeading {
-  margin: var(--space-size-3);
+  margin: var(--spacer-3);
   text-align: end;
 }
 
@@ -208,7 +248,7 @@
 }
 
 .advertisementConclusion p {
-  font-size: var(--space-size-4);
+  font-size: var(--spacer-4);
   margin-bottom: 0;
 }
 
@@ -218,14 +258,14 @@
 }
 
 .advertisementConclusion button {
-  margin: var(--space-size-3) 0;
-  padding: 0 var(--space-size-4);
+  margin: var(--spacer-3) 0;
+  padding: 0 var(--spacer-4);
   border: 1px solid var(--main-color-blue);
   line-height: calc(32px - 1px * 2);
-  border-radius: 16px;
+  border-radius: var(--spacer-4);
   background-color: transparent;
   color: var(--main-color-blue);
-  font-size: var(--space-size-4);
+  font-size: var(--spacer-4);
   font-weight: var(--font-weight-bold);
   cursor: pointer;
 }
@@ -241,18 +281,18 @@
 }
 
 .discoverSection {
-  margin-top: var(--space-size-2);
+  margin-top: var(--spacer-2);
 }
 
 .discoverTag {
   text-align: start;
-  padding: var(--space-size-1) 0;
+  padding: var(--spacer-1) 0;
 }
 
 .discoverTag a {
   text-decoration: none;
   color: var(--main-color-blue);
-  font-size: var(--space-size-3);
+  font-size: var(--spacer-3);
   font-weight: var(--font-weight-bold);
 }
 
@@ -261,7 +301,7 @@
 }
 
 .discoverTag button {
-  font-size: var(--space-size-4);
+  font-size: var(--spacer-4);
   border: none;
   background-color: transparent;
   color: var(--color-light-dark-2);
@@ -285,7 +325,7 @@
   border-bottom-right-radius: var(--border-radius-lg);
   text-decoration: none;
   color: var(--color-light-dark-2);
-  padding: var(--space-size-3) 0;
+  padding: var(--spacer-3) 0;
 }
 
 .discoverMore a:hover {
@@ -293,7 +333,7 @@
 }
 
 .container {
-  padding: var(--space-size-3);
+  padding: var(--spacer-3);
 }
 
 .footer ul {
@@ -304,14 +344,14 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: var(--space-size-4) var(--space-size-5);
+  margin: var(--spacer-4) var(--spacer-5);
 }
 
 .footer ul li {
   font-size: 12px;
   color: var(--color-light-dark-2);
   display: flex;
-  margin: var(--space-size-1) var(--space-size-2);
+  margin: var(--spacer-1) var(--spacer-2);
 }
 
 .stopScroll {

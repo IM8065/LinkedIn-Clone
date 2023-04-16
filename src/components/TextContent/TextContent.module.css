@@ -7,6 +7,6 @@
 }
 
 .postParagraph {
-  margin-top: var(--space-size-3);
-  margin-bottom: var(--space-size-4);
+  margin-top: var(--spacer-3);
+  margin-bottom: var(--spacer-4);
 }

@@ -1,4 +1,5 @@
 .menuContainer {
+  display: none;
   width: 380px;
   height: calc(100vh - 50px);
   box-sizing: border-box;
@@ -11,43 +12,26 @@
   background-color: white;
   z-index: 999;
   padding: 24px;
-  transform: translateX(100%);
   will-change: transform;
-  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
-  /* transition: 330ms; */
-  /* transition: transform 330ms ease-in-out;
-  transform: translatex(400px); */
-  /* animation: mymove 330ms ease-in-out; */
+  transition: transform 330ms ease-in-out;
+  animation: mymove 330ms linear;
 }
 
-/* @keyframes mymove {
+@keyframes mymove {
   0% {
-    transform: translatex(400px);
+    transform: translateX(100%);
   }
   100% {
-    transform: translatex(0);
+    transform: translateX(0);
   }
-} */
+}
 
 .open {
-  /* display: initial; */
-  /* width: 380px;
-  padding: 24px; */
-  transform: none;
-  /* transform: translateX(0); */
+  display: initial;
 }
 
-/* .closed {
-  animation: closing 330ms ease-in-out;
-} */
-
-@keyframes closing {
-  0% {
-    transform: translatex(0);
-  }
-  100% {
-    transform: translatex(400px);
-  }
+.closing {
+  transform: translateX(100%);
 }
 
 .containerHeader {

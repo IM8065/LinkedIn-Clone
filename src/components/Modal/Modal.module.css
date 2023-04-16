@@ -61,8 +61,8 @@
 }
 
 .modalHeading button {
-  margin: var(--space-size-1) 0;
-  padding: 0 var(--space-size-4);
+  margin: var(--spacer-1) 0;
+  padding: 0 var(--spacer-4);
   border: 1px solid var(--main-color-blue);
   line-height: calc(24px - 1px * 2);
   border-radius: 16px;

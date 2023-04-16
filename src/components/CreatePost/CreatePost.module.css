@@ -1,16 +1,16 @@
 .postContainer {
   background-color: white;
-  padding: var(--space-size-4);
+  padding: var(--spacer-4);
   padding-bottom: 0;
   border-radius: var(--border-radius-lg);
 }
 .postStart {
   display: flex;
-  gap: var(--space-size-2);
+  gap: var(--spacer-2);
 }
 
 .postStart img {
-  height: var(--space-size-7);
+  height: var(--spacer-7);
   border-radius: 50%;
 }
 
@@ -23,13 +23,14 @@
   border: 1px solid var(--color-light-dark-1);
   border-radius: 35px;
   text-align: initial;
-  padding-left: var(--space-size-3);
+  padding-left: var(--spacer-3);
 }
 
 .buttonOptions {
   display: flex;
-  justify-content: space-between;
-  padding-top: var(--space-size-1);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: var(--spacer-1);
 }
 
 .buttonOption {
@@ -42,7 +43,7 @@
   justify-content: space-between;
   border-radius: var(--border-radius-sm);
   padding: 12px 8px;
-  margin: var(--space-size-1);
+  margin: var(--spacer-1);
 }
 
 .buttonOption:hover {
@@ -50,7 +51,7 @@
 }
 
 .buttonOption span {
-  margin-left: var(--space-size-4);
+  margin-left: var(--spacer-4);
   color: var(--color-light-dark-2);
 }
 

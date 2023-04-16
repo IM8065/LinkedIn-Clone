@@ -1,33 +1,79 @@
 .listItem {
   height: 100%;
-  /* box-sizing: border-box; */
+  margin: 0;
+  position: relative;
 }
 
 .navLink {
-  font-size: var(--space-size-3);
+  font-size: var(--spacer-3);
   color: var(--color-light-dark-2);
   cursor: pointer;
   text-decoration: none;
-  padding: 0 8px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-  min-width: 82px;
+  min-width: 80px;
   height: 100%;
 }
 
+.linkLabel {
+  display: none;
+}
+
+.activeLink {
+  width: 80px;
+  height: 2px;
+  border-bottom: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+}
 .icon {
   width: 24px;
   height: 24px;
   color: var(--color-light-dark-2);
 }
 
-.activeLink {
-  color: var(--color-main);
-  border-bottom: 2px solid black;
-  color: rgba(0, 0, 0);
+@media screen and (min-width: 854px) {
+  .linkLabel {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .activeLink {
+    border: none;
+  }
+
+  .navLink {
+    min-width: 48px;
+  }
+
+  .listItem {
+    margin: 0 12px;
+  }
+}
+
+@media screen and (max-width: 747px) {
+  .listItem {
+    margin: 0 2px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .listItem {
+    margin: 0;
+  }
+  .navLink {
+    width: 32px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .navLink:hover {

@@ -1,20 +1,32 @@
 .header {
-  box-sizing: border-box;
-  padding: 0 var(--container-padding);
-  border-bottom: 1px solid var(--gray-border-color);
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
+  padding: 0 var(--spacer-5);
   position: sticky;
   top: 0;
-  background-color: white;
+  box-sizing: border-box;
   z-index: 10;
+  border-bottom: 1px solid var(--gray-border-color);
+  height: 50px;
+  background-color: white;
+}
+
+.headerContent {
+  width: 1128px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 1176px) {
+  .headerContent {
+    width: 100%;
+  }
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-size-2);
+  gap: var(--spacer-2);
 }
 
 .searchArea {
@@ -25,6 +37,39 @@
   position: absolute;
   top: 8px;
   left: 14px;
+}
+
+.searchText {
+  display: none;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .searchArea {
+    position: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .searchArea input {
+    display: none;
+  }
+
+  .searchArea img {
+    width: 24px;
+    height: 24px;
+    position: initial;
+  }
+
+  .searchText {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    margin-left: auto;
+  }
 }
 
 .search {
@@ -47,6 +92,7 @@
   display: flex;
   align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .profilePicture {
@@ -54,14 +100,26 @@
 }
 
 .button {
+  flex-wrap: wrap;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color: var(--color-light-dark-2);
+  text-align: center;
+  justify-content: center;
+  min-width: 80px;
+  height: 100%;
 }
 
 .button img {
   border-radius: 50%;
-  height: var(--space-size-5);
+  height: var(--spacer-5);
+  width: var(--spacer-5);
+  display: block;
+  margin-bottom: 2px;
 }
 
 .profileModal {
@@ -93,6 +151,29 @@
   display: initial;
 }
 
-.hide {
-  overflow-y: hidden;
+.linkLabel {
+  display: none;
+}
+
+@media screen and (min-width: 854px) {
+  .linkLabel {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .button {
+    min-width: 48px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .button {
+    width: 32px;
+  }
+
+  .button img {
+    height: 18px;
+    width: 18px;
+  }
 }
